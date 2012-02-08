@@ -22,7 +22,6 @@ public class ResultsTask implements Runnable {
 		this.game = game;
 	}
 
-	@Override
 	public void run() {
 		
 		Type type = game.getType();

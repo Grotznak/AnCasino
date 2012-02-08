@@ -16,7 +16,6 @@ public class AnCommandExecutor implements CommandExecutor{
 		this.plugin = plugin;
 	}
 
-	@Override
 	public boolean onCommand(CommandSender sender, Command command, String commandlabel, final String[] args) {
 		
 		if(sender instanceof Player) {

@@ -19,7 +19,6 @@ public class StopRotateTask implements Runnable {
 	}
 	
 	// The task itself
-	@Override
 	public void run() {
 		
 		Location location = game.getSlot().getController().getLocation();
