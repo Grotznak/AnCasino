@@ -44,6 +44,7 @@ public class Game {
 		
 		this.scheduler = plugin.getServer().getScheduler();
 		Integer[] task = new Integer[3];
+		// Long[] speed = {8L, 6L, 4L};
 		Long[] delay = {60L, 80L, 100L};
 		
 		if(!slot.isEnabled()) {
@@ -64,8 +65,8 @@ public class Game {
 		
 		// Initiate tasks
 		for(Integer i = 0; i < 3; i++) {
-			task[i] = scheduler.scheduleSyncRepeatingTask(plugin, new RotateTask(this, i), 0L, 6L);
-			scheduler.scheduleSyncDelayedTask(plugin, new StopRotateTask(this, task[i]), delay[2-i]);
+			task[i] = scheduler.scheduleSyncRepeatingTask(plugin, new RotateTask(this, i), 0L, 8L - (2 * i));
+			scheduler.scheduleSyncDelayedTask(plugin, new StopRotateTask(this, task[i]), delay[i]);
 		}
 		
 		// Results task
