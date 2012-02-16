@@ -31,7 +31,7 @@ public class AnPlayerListener implements Listener {
 			Block b = event.getClickedBlock();
 				
 			// Left clicked note block
-			if(b.getType() == Material.NOTE_BLOCK) {
+			if(event.hasBlock() && b.getType().equals(Material.NOTE_BLOCK)) {
 					
 				// Look for matching controller block
 				for(SlotMachine slot : plugin.slotData.getSlots()) {
